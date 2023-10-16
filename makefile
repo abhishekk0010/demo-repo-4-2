@@ -14,7 +14,9 @@ github: FORCE
 	- git commit -a
 	git push origin master
 
-all_tests: lint unit
+all_tests:
+    export PYTHONPATH=$(pwd)
+    lint unit
 
 unit: FORCE
 	cd $(API_DIR); pytest $(PYTESTFLAGS) --cov=$(PKG)

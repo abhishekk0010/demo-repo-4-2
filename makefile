@@ -15,7 +15,7 @@ github: FORCE
 	git push origin master
 
 all_tests:
-	export PYTHONPATH=$(pwd)
+	export PYTHONPATH=$(REQ_DIR)
 	lint unit
 
 unit: FORCE
